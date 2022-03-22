@@ -11,3 +11,4 @@ Monitoring screen for BMW E36
 
 # Todo list
 - Wiring to cluster
+- Wiring diagram

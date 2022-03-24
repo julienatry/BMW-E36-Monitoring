@@ -3,7 +3,6 @@
 int RPM;
 float pwm_freq, pwm_single_rotation, pwm_rpm, pwm_period;
 unsigned long pwm_start_time, pwm_stop_time;
-
 const int pwm_num_periods = 25;
 int pwm_periods [pwm_num_periods];
 int pwm_read_index;

@@ -1,6 +1,7 @@
 #define pwm_in 2
 
-float pwm_freq, pwm_period, pwm_rpm;
+int RPM;
+float pwm_freq, pwm_single_rotation, pwm_rpm, pwm_period;
 unsigned long pwm_start_time, pwm_stop_time;
 const int pwm_num_periods = 25;
 int pwm_periods [pwm_num_periods];
@@ -36,10 +37,11 @@ void pwm_stop() {
   Serial.print("Frequency : ");
   Serial.println(pwm_freq);
 
-  pwm_rpm = pwm_freq * 26;
+  pwm_single_rotation = pwm_freq / 3.0;
+  pwm_rpm = pwm_single_rotation * 60.0;
   Serial.print("RPM : ");
   Serial.println(pwm_rpm);
-  
+
   attachInterrupt(digitalPinToInterrupt(pwm_in), pwm_start, RISING);
 }
 

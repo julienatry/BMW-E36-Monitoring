@@ -1,6 +1,5 @@
 #define pwm_in 2
 
-int RPM;
 float pwm_freq, pwm_single_rotation, pwm_rpm, pwm_period;
 unsigned long pwm_start_time, pwm_stop_time;
 const int pwm_num_periods = 25;
